@@ -15,20 +15,22 @@
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <!--細項-->
+        <!--新增細項-->
         <StackPanel Grid.Row="0">
             <local:HeatTotal></local:HeatTotal>
         </StackPanel>
 
         <!--項目清單-->
-        <StackPanel x:Name="HeatList" Grid.Row="1"></StackPanel>
-        
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <StackPanel x:Name="HeatList" Grid.Row="1"></StackPanel>
+        </ScrollViewer>
+            
         <!--底部設計-->
         <Grid Grid.Row="2" Background="DarkCyan">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                 
                 <!--增加項目-->
-            <Grid x:Name="AddItem" Margin="20" Width="60" Height="60" HorizontalAlignment="Left">
+            <Grid x:Name="AddItem" Margin="20" Width="60" Height="60" HorizontalAlignment="Left" MouseDown="AddItem_MouseDown">
                 <Border CornerRadius="5" Background="LightCyan" BorderBrush="LightGray" BorderThickness="3"></Border>
                 <TextBlock Margin="0" Width="60" FontSize="45" Foreground="DarkBlue" VerticalAlignment="Center" TextAlignment="Center">+</TextBlock>
             </Grid>

@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:DietControl"
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="400">
-    <Grid Background="DarkCyan" Height="100" x:Name="ItemCenter">
-       
+    <Grid Background="LightCyan" Height="80" x:Name="ItemCenter">
+        
         <!-- 定義格子 -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"></ColumnDefinition>
@@ -15,18 +15,16 @@
         </Grid.ColumnDefinitions>
 
         <!-- 食物名 -->
-        <Grid Grid.Column="0" Background="Black">
+        <Grid Grid.Column="0" >
             <TextBox x:Name="Food" Background="LightCyan" FontSize="20" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">Foods</TextBox>
         </Grid>
 
         <!-- 熱量輸入區 -->
         <Grid Grid.Column="1">
-            <Border BorderBrush="Black" BorderThickness="3">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock FontSize="22" Margin="10" >熱量:</TextBlock>
-                    <TextBox x:Name="AllHeat" Background="LightCyan" FontSize="25" Width="165" TextAlignment="Center" VerticalAlignment="Center">0</TextBox>
-                </StackPanel>
-            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock FontSize="22" Margin="10" >熱量:</TextBlock>
+                <TextBox x:Name="FoodHeat" Background="LightCyan" Margin="5" FontSize="22" Width="165" VerticalAlignment="Center"></TextBox>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

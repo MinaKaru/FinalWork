@@ -24,5 +24,22 @@ namespace DietControl
         {
             InitializeComponent();
         }
+
+        // 新增按鈕按下事件
+        private void AddItem_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // 產生項目
+            HeatItem item = new HeatItem();
+            item.DeleteItem += new EventHandler(DeleteItem);
+
+            // 放到清單中
+            HeatList.Children.Add(item);
+        }
+        // 刪除事件
+        private void DeleteItem(object sender, EventArgs e)
+        {
+            HeatList.Children.Remove((HeatItem)sender);
+        }
     }
 }
+

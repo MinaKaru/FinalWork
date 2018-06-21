@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="400">
 
-    <Grid Background="White" Height="100" x:Name="ItemTop">
+    <Grid Background="DarkCyan" Height="100" x:Name="ItemTop">
 
         <!-- 定義格子 -->
         <Grid.ColumnDefinitions>
@@ -16,17 +16,15 @@
         </Grid.ColumnDefinitions>
        
         <!-- 日期框 -->
-        <Grid Grid.Column="0" Background="Black">
-            <TextBox x:Name="Date" FontSize="22" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">Dates</TextBox>
+        <Grid Grid.Column="0" Background="LightCyan">
+            <TextBox x:Name="Date" Background="LightCyan" FontSize="22" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">Dates</TextBox>
         </Grid>
 
         <Grid Grid.Column="1">
-            <Border BorderBrush="Black" BorderThickness="3">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock FontSize="30" Margin="10" >總熱量:</TextBlock>
-                    <TextBox x:Name="AllHeat" FontSize="35" Width="165" VerticalAlignment="Center">0</TextBox>
-                </StackPanel>
-            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock  FontSize="30" Margin="10" >總熱量:</TextBlock>
+                <TextBox x:Name="AllHeat" Background="DarkCyan" FontSize="35" Width="165" VerticalAlignment="Center"></TextBox>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

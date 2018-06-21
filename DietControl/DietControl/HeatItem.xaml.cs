@@ -24,5 +24,16 @@ namespace DietControl
         {
             InitializeComponent();
         }
+
+        public event EventHandler DeleteItem;
+
+        // 鍵盤事件
+        private void AddItem_MouseDown(object sender, KeyEventArgs e)
+        {
+            if (FoodHeat.Text == "" && e.Key == Key.Back)
+            {
+                DeleteItem(this, null);
+            }
+        }
     }
 }
