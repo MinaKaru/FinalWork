@@ -15,6 +15,7 @@
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <!--細項-->
         <StackPanel Grid.Row="0">
             <local:HeatTotal></local:HeatTotal>
         </StackPanel>
