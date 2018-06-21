@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="DietControl.HeatItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DietControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="400">
+    <Grid Background="DarkCyan" Height="100" x:Name="ItemCenter">
+       
+        <!-- 定義格子 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="320"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- 食物名 -->
+        <Grid Grid.Column="0" Background="Black">
+            <TextBox x:Name="Food" Background="LightCyan" FontSize="20" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">Foods</TextBox>
+        </Grid>
+
+        <!-- 熱量輸入區 -->
+        <Grid Grid.Column="1">
+            <Border BorderBrush="Black" BorderThickness="3">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock FontSize="22" Margin="10" >熱量:</TextBlock>
+                    <TextBox x:Name="AllHeat" Background="LightCyan" FontSize="25" Width="165" TextAlignment="Center" VerticalAlignment="Center">0</TextBox>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
