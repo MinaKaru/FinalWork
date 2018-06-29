@@ -52,6 +52,7 @@ namespace DietControl
 
             int i = 0;
             bool result = int.TryParse(AllHeat.Text, out i);
+           
             // 計算每一個項目
             foreach (HeatItem HeatItems in HeatList.Children)
             {
@@ -62,6 +63,15 @@ namespace DietControl
 
             // 顯示
             BeLeftHeat.Text = ends.ToString();
+
+            if (ends < 0)
+            {
+                double endsover = -ends;
+
+                double hour = endsover / 400;
+
+                MessageBox.Show("您需要慢跑" + hour + "小時 , 才能消耗這些熱量 !", "警告 ! 攝取過量 !");
+            }
         }
     }
     }
