@@ -58,10 +58,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HeatTotal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,9 +68,6 @@
     </Compile>
     <Compile Include="HeatItem.xaml.cs">
       <DependentUpon>HeatItem.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HeatTotal.xaml.cs">
-      <DependentUpon>HeatTotal.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

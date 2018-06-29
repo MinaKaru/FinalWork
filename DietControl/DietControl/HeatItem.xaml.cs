@@ -27,6 +27,32 @@ namespace DietControl
 
         public event EventHandler DeleteItem;
 
+        // 封裝屬性：價格數值
+        public int itemHeatValue
+        {
+            get
+            {
+                try
+                {
+                    return int.Parse(FoodHeat.Text);
+                }
+                // 失敗後要求用家輸入數字
+                catch
+                {
+                    if (FoodHeat.Text != "")
+                    {
+
+                        MessageBox.Show("請輸入數字");
+                    }
+                    return 0;
+                }
+            }
+            set
+            {
+                FoodHeat.Text = value.ToString();
+            }
+        }
+
         // 鍵盤事件
         private void AddItem_MouseDown(object sender, KeyEventArgs e)
         {

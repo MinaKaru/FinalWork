@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DietControl"
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="400">
-    <Grid Background="LightCyan" Height="80" x:Name="ItemCenter">
+    <Grid Background="LightBlue" Height="80" x:Name="ItemCenter">
         
         <!-- 定義格子 -->
         <Grid.ColumnDefinitions>
@@ -20,11 +20,14 @@
         </Grid>
 
         <!-- 熱量輸入區 -->
-        <Grid Grid.Column="1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock FontSize="22" Margin="10" >熱量:</TextBlock>
-                <TextBox x:Name="FoodHeat" Background="LightCyan" Margin="5" FontSize="22" Width="165" VerticalAlignment="Center"></TextBox>
-            </StackPanel>
-        </Grid>
+        <Border Grid.Column="1" Background="LightCyan" BorderBrush="LightBlue" BorderThickness="3">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock FontSize="22" Margin="10" >熱量:</TextBlock>
+                    <TextBox x:Name="FoodHeat" Background="LightCyan" Margin="5" FontSize="22" Width="165" VerticalAlignment="Center"></TextBox>
+                    <TextBlock Margin="5 18 5 5" FontSize="20" VerticalAlignment="Center">kcal</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

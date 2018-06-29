@@ -34,12 +34,35 @@ namespace DietControl
 
             // 放到清單中
             HeatList.Children.Add(item);
+
+    
         }
-        // 刪除事件
-        private void DeleteItem(object sender, EventArgs e)
+            // 刪除事件
+            private void DeleteItem(object sender, EventArgs e)
+            {
+                HeatList.Children.Remove((HeatItem)sender);
+            }
+
+        private void ENTER_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            HeatList.Children.Remove((HeatItem)sender);
+
+            // 建立空的數字
+            int Ctotal = 0;
+            int ends = 0;
+
+            int i = 0;
+            bool result = int.TryParse(AllHeat.Text, out i);
+            // 計算每一個項目
+            foreach (HeatItem HeatItems in HeatList.Children)
+            {
+                // 相加
+                Ctotal += HeatItems.itemHeatValue;
+            }
+            ends = i - Ctotal;
+
+            // 顯示
+            BeLeftHeat.Text = ends.ToString();
         }
     }
-}
+    }
 

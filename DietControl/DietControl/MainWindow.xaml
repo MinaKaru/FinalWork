@@ -16,8 +16,20 @@
         </Grid.RowDefinitions>
 
         <!--新增細項-->
-        <StackPanel Grid.Row="0">
-            <local:HeatTotal></local:HeatTotal>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+
+            <!-- 日期框 -->
+            <Grid Height="100" Width="100"  Background="DarkCyan">
+                <TextBox x:Name="Date" Background="DarkCyan" FontSize="22" Margin="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0">Dates</TextBox>
+            </Grid>
+
+            <Grid >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock  FontSize="30" Margin="10" >總熱量:</TextBlock>
+                    <TextBox x:Name="AllHeat" Background="LightCyan" FontSize="28" Width="120" Height="32" VerticalAlignment="Center">0</TextBox>
+                    <TextBlock Margin="5 18 5 5" FontSize="20" VerticalAlignment="Center">kcal</TextBlock>
+                </StackPanel>
+            </Grid>
         </StackPanel>
 
         <!--項目清單-->
@@ -30,15 +42,22 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                 
                 <!--增加項目-->
-            <Grid x:Name="AddItem" Margin="20" Width="60" Height="60" HorizontalAlignment="Left" MouseDown="AddItem_MouseDown">
-                <Border CornerRadius="5" Background="LightCyan" BorderBrush="LightGray" BorderThickness="3"></Border>
-                <TextBlock Margin="0" Width="60" FontSize="45" Foreground="DarkBlue" VerticalAlignment="Center" TextAlignment="Center">+</TextBlock>
-            </Grid>
-
-            <!--剩餘熱量顯示-->
+                <Grid x:Name="AddItem" Margin="20" Width="60" Height="60" HorizontalAlignment="Left" MouseDown="AddItem_MouseDown">
+                    <Border CornerRadius="5" Background="LightCyan" BorderBrush="LightGray" BorderThickness="3"></Border>
+                    <TextBlock Margin="0" Width="60" FontSize="45" Foreground="DarkBlue" VerticalAlignment="Center" TextAlignment="Center">+</TextBlock>
+                </Grid>
+               
+                <!--剩餘熱量顯示-->
                 <TextBlock FontSize="30" VerticalAlignment="Center">剩下熱量:</TextBlock>
-                <TextBox x:Name="BeLeftHeat" Margin="7" Background="DarkCyan" FontSize="35" Width="165" VerticalAlignment="Center">0</TextBox>
+                <TextBlock x:Name="BeLeftHeat" Margin="7" Background="DarkCyan" FontSize="35" Width="90" VerticalAlignment="Center"><Run Text="0"/></TextBlock>
+                <TextBlock Margin="5 18 5 5" FontSize="20" VerticalAlignment="Center">kcal</TextBlock>
+
+               
             </StackPanel>
+            <Grid x:Name="ENTER"  Margin="330 70 5 5" Width="60" Height="30" HorizontalAlignment="Left" MouseDown="ENTER_MouseDown" >
+                <Border CornerRadius="5" Background="LightCyan" BorderBrush="LightGray" BorderThickness="3"></Border>
+                <TextBlock Margin="0" Width="60" FontSize="20" Foreground="DarkBlue" VerticalAlignment="Center" TextAlignment="Center">Enter</TextBlock>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
